@@ -88,7 +88,7 @@
 
 ## 注意事项
 
-1. ceye.io 公共 DNS / HTTP 记录会有约 5 分钟的延迟，sleep 时间如不足可调整 `Thread.sleep(2000)` 为更长值
+1. ceye.io 公共 DNS / HTTP 记录会有延迟，sleep 时间如不足可调整 `Thread.sleep(2000)` 为更长值
 2. 确保 ceye.io 账户有效且 API token 正确
 3. 扫描过程中请保持网络连接正常
 4. 检测结果可能存在误报，建议手动验证
@@ -104,7 +104,6 @@ ssrf_scan/
 │           └── burp/
 │               └── BurpExtender.java   # 插件源代码
 ├── pom.xml                             # Maven 配置
-├── compile.bat                         # Windows 编译脚本
 ├── README.md                           # 说明文档
 └── ssrf-scan.jar                       # 编译后的插件（编译后生成）
 ```
