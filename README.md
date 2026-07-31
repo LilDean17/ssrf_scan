@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | OOB 平台 | eyes.sh | ceye.io |
 | API 域名 | eyes.sh (HTTPS) | api.ceye.io (HTTP) |
-| 默认回调域名 | l1ldean.eyes.sh | 28h4il.ceye.io |
+| 默认回调域名 | l1ldean.eyes.sh | <your-ceye-domain>.ceye.io |
 | API 响应格式 | `True` / `False` 文本 | JSON（含 `data[].name` 字段） |
 | 命中判断 | 响应体等于 `True` | 响应体包含 `{prefix}.{domain}` 子串（大小写不敏感） |
 | 跳过域名 | `*.eyes.sh` | `*.ceye.io` |
@@ -44,8 +44,8 @@
 ### 配置和使用
 
 1. 在 `SSRF Scanner` 标签中确认配置：
-   - **Ceye Domain**: `28h4il.ceye.io`
-   - **Ceye Token**: `7edc361f7376da8db00dd85034fb3977`
+   - **Ceye Domain**: `<your-ceye-domain>.ceye.io`
+   - **Ceye Token**: `<your-ceye-token>`
 
 2. 点击 `Start Scanner` 开始扫描
 
@@ -73,7 +73,7 @@
 {
   "meta": {"code": 200, "message": "OK"},
   "data": [
-    {"id": "1", "type": "A", "name": "abc12345.28h4il.ceye.io", "value": "1.2.3.4", "created": "..."}
+    {"id": "1", "type": "A", "name": "abc12345.<your-ceye-domain>.ceye.io", "value": "1.2.3.4", "created": "..."}
   ]
 }
 ```
@@ -82,8 +82,8 @@
 
 ## Payload 形式
 
-- **URL 参数**：完整替换为 `http://{random}.28h4il.ceye.io`
-- **IP / 域名参数**：原值中匹配到的 IP 或域名被替换为 `{random}.28h4il.ceye.io`（不携带协议，保留原始前缀上下文）
+- **URL 参数**：完整替换为 `http://{random}.<your-ceye-domain>.ceye.io`
+- **IP / 域名参数**：原值中匹配到的 IP 或域名被替换为 `{random}.<your-ceye-domain>.ceye.io`（不携带协议，保留原始前缀上下文）
 - **JSON 字符串**：逻辑同上，按 JSONPath 定位后替换
 
 ## 注意事项

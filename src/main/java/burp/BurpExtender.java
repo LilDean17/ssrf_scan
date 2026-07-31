@@ -156,7 +156,7 @@ public class BurpExtender implements IBurpExtender, ITab, IHttpListener, IMessag
 
         gbc.gridx = 1;
         gbc.weightx = 1.0;
-        eyesDomainField = new JTextField("28h4il.ceye.io", 20);
+        eyesDomainField = new JTextField("<your-ceye-domain>.ceye.io", 20);
         panel.add(eyesDomainField, gbc);
 
         row++;
@@ -168,7 +168,7 @@ public class BurpExtender implements IBurpExtender, ITab, IHttpListener, IMessag
 
         gbc.gridx = 1;
         gbc.weightx = 1.0;
-        eyesTokenField = new JTextField("7edc361f7376da8db00dd85034fb3977", 20);
+        eyesTokenField = new JTextField("<your-ceye-token>", 20);
         panel.add(eyesTokenField, gbc);
 
         row++;
