@@ -1,4 +1,6 @@
-# SSRF Scanner (ceye.io) - Burp Suite Plugin
+# SSRF Scanner - Burp Suite Plugin
+
+SSRF 带外检测插件，通过 ceye.io 回调平台自动识别 Burp Proxy 流量中的 SSRF 漏洞。
 
 ## 功能说明
 
